@@ -1,7 +1,7 @@
 {
   "name": "atom-dark-modified",
   "theme": "ui",
-  "version": "0.50.1",
+  "version": "0.51.0",
   "description": "A darker clean theme for atom",
   "license": "MIT",
   "repository": "https://github.com/MordFustang21/atom-dark-modified",
