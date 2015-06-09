@@ -15,6 +15,7 @@
   padding: 0 10px 0 25px;
   overflow-x: auto;
   overflow-y: hidden;
+  margin-left: -31px;
 
   &::-webkit-scrollbar {
     display: none;
@@ -40,11 +41,10 @@
     height: @tab-height;
     line-height: @tab-height;
     padding: 0;
-    margin: 0 20px 0 5px;
+    margin: 0 0px 0 5px;
     color: @text-color;
 
     transition: color .1s ease-in;
-    border: none;
 
     &, &:before, &:after {
       background-image: -webkit-linear-gradient(top, lighten(#333, 7%), #333);
@@ -59,24 +59,8 @@
       height: @tab-height;
     }
 
-    // left angled edge
-    &:before {
-      left: -14px;
-      border-top-left-radius: @tab-radius;
-      box-shadow: inset 1px 1px 0 @tab-border-color, -4px 0px 4px rgba(0,0,0,.1);
-      -webkit-transform: skewX(-@tab-skew);
-    }
-
-    // right angled edge
-    &:after {
-      right: -14px;
-      border-top-right-radius: @tab-radius;
-      box-shadow: inset -1px 1px 0 @tab-border-color, 4px 0px 4px rgba(0,0,0,.1);
-      -webkit-transform: skewX(@tab-skew);
-    }
-
     .close-icon {
-      right: 0;
+      right: 2;
       z-index: 3;
       text-align: right;
       line-height: @tab-height;
@@ -101,6 +85,7 @@
     .title{
       position: relative;
       z-index: 1;
+      margin-left: 5px;
       padding-right: 10px
     }
   }
@@ -109,6 +94,7 @@
     z-index: 1;
     color: @text-color-highlight;
     box-shadow: inset -1px 1px 0 @tab-border-color, 4px -4px 4px rgba(0,0,0,.1);
+    border-bottom: 3px solid @blue;
 
     .close-icon {
       line-height: @tab-height - 1px;
@@ -116,8 +102,9 @@
     }
 
     &, &:before, &:after {
-      background-image: -webkit-linear-gradient(top, lighten(@tab-background-color-active, 7%), @tab-background-color-active);
+      background-image: -webkit-linear-gradient(top, lighten(#222, 7%), #222);
       height: @tab-height + 1px;
+      border-bottom: 3px solid @blue;
     }
 
     &:before {
@@ -125,7 +112,7 @@
     }
 
     &:after {
-      box-shadow: inset -1px 1px 0 @tab-border-color, 4px -4px 4px rgba(0,0,0,.1);
+      box-shadow: inset 0px 1px 0 @tab-border-color, 0px 0px 0px rgba(0,0,0,.1);
     }
   }
 
